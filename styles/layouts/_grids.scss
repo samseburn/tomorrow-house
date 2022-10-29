@@ -82,7 +82,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     // unit값 75px로 고정
     @for $i from 1 through $lg-columns {
       .col-lg-#{$i} {
-        width: ($lg-unit * $gutter) * $i;
+        width: ($lg-unit + $gutter) * $i;
       }
     }
   }

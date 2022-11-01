@@ -1,0 +1,84 @@
+// 버튼 공통 스타일
+// display: inline-flex;
+// -> 텍스트에 대응하기 위해
+// -> 항상 중앙 정렬하기 위해
+
+%btn-base {
+  @include inline-flexbox();
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 700;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+// NOTE: Button Styles
+.btn-primary {
+  @extend %btn-base;
+  background-color: $blue;
+  color: $white;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    // :not(선택자) -> 괄호 안 선택자 제외하고 선택
+    background-color: $blue-dark;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-base;
+  background-color: $border;
+  color: $primary;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: $tertiary;
+  }
+}
+
+.btn-outlined {
+  @extend %btn-base;
+  border: 1px solid $blue;
+  background-color: $white;
+  color: $blue;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: $blue-light;
+  }
+}
+
+.btn-ghost {
+  @extend %btn-base;
+  background-color: transparent;
+  color: $primary;
+  transition: color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    color: $secondary;
+  }
+}
+
+// NOTE: Button sizes
+.btn-32 {
+  @include text-style(14);
+  height: 32px;
+}
+
+.btn-40 {
+  @include text-style(16);
+  height: 40px;
+}
+
+.btn-48 {
+  @include text-style(16);
+  height: 48px;
+}
+
+.btn-55 {
+  @include text-style(18);
+  height: 55px;
+}

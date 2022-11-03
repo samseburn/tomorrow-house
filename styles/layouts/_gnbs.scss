@@ -53,9 +53,11 @@
     }
 
     .logo {
+      $padding: 8px;
       position: static;
-      margin-right: 32px;
+      margin-right: 32px - $padding;
       transform: none;
+      padding: $padding;
 
       img {
         height: 24px;

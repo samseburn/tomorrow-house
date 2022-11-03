@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <!-- lang= ko(한국어) ko-KR(한국어-대한민국에서 사용) ko-KP(한국어-북한에서 사용) -->
   <head>
     <meta charset="UTF-8" />
@@ -38,5 +38,107 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <!--
+      1. 정보콘텐츠의 역할과 의미에 맞게 시맨틱 마크업
+      2. 레이아웃과 스타일링을 위한 마크업 보강 (그룹핑)
+      3. 전체 요소에 통일성 있는 클래스 생성
+    -->
+
+    <!-- header -->
+    <header class="gnb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="gnb-left">
+              <h1 class="logo">
+                <a href="/">
+                  <img src="./assets/images/Logo.svg" alt="내일의 집" />
+                </a>
+              </h1>
+
+              <nav class="gnb-nav sm-hidden">
+                <h2 class="visually-hidden">메뉴</h2>
+                <ul class="gnb-nav-list">
+                  <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
+                  <li class="gnb-nav-item"><a href="/">스토어</a></li>
+                  <li class="gnb-nav-item"><a href="/">인테리어시공</a></li>
+                </ul>
+              </nav>
+
+              <button
+                class="gnb-icon-button sm-only"
+                type="button"
+                aria-label="메뉴 열기 버튼"
+              >
+                <i class="ic-menu"></i>
+              </button>
+            </div>
+            <div class="gnb-right">
+              <div class="input-group lg-only">
+                <i class="ic-search"></i>
+                <input
+                  class="form-input"
+                  type="text"
+                  placeholder="스토어 검색"
+                />
+              </div>
+              <!-- Icon group -->
+              <div class="button-group">
+                <button
+                  class="gnb-icon-button lg-hidden"
+                  type="button"
+                  aria-label="검색창 열기 버튼"
+                >
+                  <i class="ic-search"></i>
+                </button>
+
+                <a
+                  class="gnb-icon-button sm-hidden"
+                  href="/"
+                  aria-label="스크랩북 페이지로 이동"
+                >
+                  <i class="ic-bookmark"></i>
+                </a>
+
+                <a
+                  class="gnb-icon-button sm-hidden"
+                  href="/"
+                  aria-label="내 소식 페이지로 이동"
+                >
+                  <i class="ic-bell"></i>
+                </a>
+
+                <a
+                  class="gnb-icon-button"
+                  href="/"
+                  aria-label="장바구니 페이지로 이동"
+                >
+                  <i class="ic-cart"></i>
+                </a>
+
+                <button
+                  class="gnb-avatar-button sm-hidden"
+                  type="button"
+                  aira-label="마이메뉴 열기 버튼"
+                >
+                  <div class="avatar-32">
+                    <img
+                      src="./assets/images/img-user-01.jpg"
+                      alt="유저 프로필"
+                    />
+                  </div>
+                </button>
+              </div>
+
+              <button class="btn-primary btn-40 sm-hidden" type="button">
+                글쓰기
+                <i class="ic-chevron" aria-hidden></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>

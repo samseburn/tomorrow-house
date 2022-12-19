@@ -53,8 +53,8 @@
   @if ($size == 24) {
     @include text-style-24;
   }
-}
 
-p {
-  @include text-style(24);
+  @if (type-of($color) == color) {
+    color: $color;
+  }
 }

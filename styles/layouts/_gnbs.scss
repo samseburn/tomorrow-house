@@ -113,9 +113,10 @@
         &.is-active {
           display: block;
         }
-      }
 
-      &-header {
+        &-header {
+          padding: 0 8px;
+        }
       }
     }
   }
